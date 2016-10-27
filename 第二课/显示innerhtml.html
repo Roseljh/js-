@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box{
+			margin: 20px auto;
+			width: 260px;
+		}
+		#box>div{
+			border:1px solid #ccc;
+			margin-top: 6px;
+			line-height: 25px;
+			padding: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div><em>新华网</em>傻大个法式蛋糕，伤感的歌鬼地方，也人也让好尔特人</div>
+		<div><em>第二</em><span>上根深蒂固，水电工水电工个</span>SD敢达上给，投入人同一人她也让他而野人特尔特让他</div>
+		<div>第三<strong>上根深蒂固，水电工水电工个</strong>SD敢达上给，投入人同一人她也让他而野人特尔特让他</div>
+	</div>
+</body>
+</html>
+<script>
+	window.onload=function(){
+		var box=document.getElementById('box');
+		var divs=box.getElementsByTagName('div');
+		for(var i=0;i<divs.length;i++){
+			divs[i].onclick=function(){
+				alert(this.innerHTML);
+			}
+		}
+	}
+</script>

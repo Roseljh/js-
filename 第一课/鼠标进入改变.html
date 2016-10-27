@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#box{
+			width: 200px;
+			height: 200px;
+			margin: 20px auto;
+			background: pink;
+			border: 5px solid #000;
+			cursor:crosshair;
+		}
+		#box.hover{
+			background: purple;
+			border: 5px solid red;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">鼠标移入改变样式，移出恢复</div>
+</body>
+</html>
+<script type="text/javascript">
+	window.onload=function(){
+		var div=document.getElementById('box');
+		div.onmouseover=function(){
+			div.className="hover"
+		};
+		div.onmouseout=function(){
+			div.className=""
+		}
+	}
+</script>

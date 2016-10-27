@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box{
+			width: 200px;
+			margin: 20px auto;
+		}
+		input{
+			margin-right: 10px;
+		}
+		#tip{
+			background: pink;
+			border: 1px solid red;
+			padding:5px;
+			line-height: 20px;
+			margin-top: 5px;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<p><input type="checkbox">两周内自动登录</p>
+		<div id="tip">为了您的信息安全，请不要在网吧或公用电脑上使用此功能！</div>
+	</div>
+</body>
+</html>
+<script>
+	window.onload=function(){
+		var tip=document.getElementById('tip');
+		var p=document.getElementsByTagName('p')[0];
+		p.onmouseover=function(){
+			tip.style.display="block"
+		}
+		p.onmouseout=function(){
+			tip.style.display="none"
+		}
+	}
+</script>
